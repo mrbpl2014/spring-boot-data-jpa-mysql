@@ -21,15 +21,29 @@ public class Tutorial {
 	
 	@Column(name = "year")
 	private int year;
+	
+	@Column(name = "price")
+	private double price;
+	
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
 
 	public Tutorial() {
 
 	}
 
-	public Tutorial(String title, String description, boolean published) {
+	public Tutorial(String title, String description, boolean published, int year, double price) {
 		this.title = title;
 		this.description = description;
 		this.published = published;
+		this.year = year;
+		this.price = price;
 	}
 
 	public long getId() {
@@ -58,6 +72,16 @@ public class Tutorial {
 
 	public void setPublished(boolean isPublished) {
 		this.published = isPublished;
+	}
+	
+	
+
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
 	}
 
 	@Override
