@@ -18,6 +18,9 @@ public class Tutorial {
 
 	@Column(name = "published")
 	private boolean published;
+	
+	@Column(name = "year")
+	private int year;
 
 	public Tutorial() {
 
